@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div id="myDiv" class="container"><h1 class="distance_text" id="ex">Loading...</h1></div>
+<br>
+
+<style>
+.container {
+  width: 2050px;
+  height: 450px;
+  border-style: solid;
+  /* Center vertically and horizontally */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 6px;
+}
+.distance_text{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7cm;
+  font-family: 'Play', sans-serif;
+  color: #0091D5;
+}
+body{
+  background-color: black;
+}
+</style>
+
+<script>
+var timeout;
+async function getStatus() {
+  let get;
+  try {
+    const res = await fetch("/status");
+    get = await res.json();
+  } catch (e) {
+    console.error("Error: ", e);
+  }
+  document.getElementById("ex").innerHTML = get.status + " cm";
+  timeout = setTimeout(getStatus, 600);
+}
+
+getStatus();
+</script>
+
+</body>
+</html>

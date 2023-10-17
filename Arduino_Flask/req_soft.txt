@@ -1,0 +1,5 @@
+tesseract.exe
+arduino - ide
+arduino - drivers for COM port
+python 10+
+

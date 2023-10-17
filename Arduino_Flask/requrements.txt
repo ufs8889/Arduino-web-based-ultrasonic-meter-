@@ -1,0 +1,7 @@
+flask
+serial
+pyserial
+cv2
+pytesseract
+telebot
+selenium 
