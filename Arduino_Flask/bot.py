@@ -13,14 +13,14 @@ bot = telebot.TeleBot('TOKEN')
 def taken_picture():
   browser = webdriver.Chrome()
   browser.get('http://127.0.0.1:5000')
-  path = r'C:\Users\Siroca\Desktop\icon\img\screenie.png'
+  path = r'C:\Users\xxx|xxx\screenie.png'
   browser.save_screenshot(path)
   browser.quit()
   return path
  
 
 def img_text():
-  img = cv2.imread(r'C:\Users\Siroca\Desktop\icon\img\screenie.png')
+  img = cv2.imread(r'C:\Users\xxx\img\screenie.png')
   config = ('-l eng --oem 1 --psm 3')
   pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
   text  = pytesseract.image_to_string(img, config=config)
