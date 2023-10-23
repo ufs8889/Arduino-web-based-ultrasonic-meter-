@@ -7,7 +7,7 @@ from datetime import datetime
 from selenium import webdriver
 
 now = datetime.now() 
-bot = telebot.TeleBot('6201292411:AAER7Y4UlCHVFKx1Fuh6KMasWjYUtM8wYhg')
+bot = telebot.TeleBot('TOKEN')
 
 
 def taken_picture():
