@@ -3,7 +3,7 @@ import cv2
 import pytesseract
 
 # read image
-img = cv2.imread(r'C:\Users\Siroca\Desktop\icon\img\screenie.png')
+img = cv2.imread(r'C:\Users\xxx\icon\img\screenie.png')
 
 # configurations
 config = ('-l eng --oem 1 --psm 3')
