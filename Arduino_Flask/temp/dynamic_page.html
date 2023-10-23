@@ -3,7 +3,7 @@
 <body>
 
 
-<div id="myDiv" class="container"><h1 class="distance_text" id="ex">Loading...</h1></div>
+<div id="myDiv" class="container"><h1 class="distance_text" id="display_distance">Loading...</h1></div>
 <br>
 
 <style>
@@ -42,7 +42,7 @@ async function getStatus() {
   } catch (e) {
     console.error("Error: ", e);
   }
-  document.getElementById("ex").innerHTML = get.status + " cm";
+  document.getElementById("display_distance").innerHTML = get.status + " cm";
   timeout = setTimeout(getStatus, 600);
 }
 
